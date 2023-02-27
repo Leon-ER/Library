@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <header>
+      <h1>Book library</h1>
+    </header>
+    <section class="addBooks">
+      <button id="addBook">Add new book</button>
+    </section>
+    <section class="centerPopUp">
+      <!-- PopUp -->
+      <div id="popUp" class="inputPopUp">
+        <div class="content">
+          <form action="#" method="get" id="booksForm">
+            <legend for="title">Title of the book</legend>
+            <input id="title" type="text"  required />
+            <legend for="author">Author of the book</legend>
+            <input id="author" type="text"  required />
+            <legend for="pages">How many pages</legend>
+            <input id="pages" type="number"required />
+            <legend for="read">Have you read the book</legend>
+            <select id="read" type="text"  required>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <button id="submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- End popUp -->
+    </section>
+    <section class="books">
+        <button class="read invisible">Read</button>
+        <button class="remove invisible">Remove</button>
+    </section>
+    <footer>
+      <p>Made by <a target="_blank" href="https://github.com/Leon-ER">Leon</a></p>
+    </footer>
+  </body>
+  <script src="js.js"></script>
+</html>
