@@ -77,13 +77,12 @@ footer {
 }
 
 .content {
-  background-color:rgb(223, 221, 219);
+  background-color: rgb(223, 221, 219);
   margin: auto;
   padding: 20px;
   width: 80%;
   height: 35vh;
   border-radius: 20px;
-  
 }
 
 #submit {
@@ -93,8 +92,8 @@ footer {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#submit:hover,
+#submit:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -105,22 +104,31 @@ footer {
   justify-content: center;
 }
 /* Classes for if the book is read or not */
-.isRead{
+.isRead {
   background-color: rgb(51, 241, 51);
+  border-radius: 5px;
+  outline: none;
+  border-color: black;
+  width: 100px;
+  margin-bottom: 20px;
 }
-.isNotRead{
+.isNotRead {
   background-color: rgb(236, 49, 49);
+  border-radius: 5px;
+  outline: none;
+  border-color: black;
+  width: 100px;
+  margin-bottom: 20px;
 }
 /* inputs */
 
-input{
+input {
   border-radius: 6px;
   outline: none;
   border-color: transparent;
 }
-input:focus{
+input:focus {
   border-color: rgb(132, 209, 245);
 }
-.invisible{
-  display: none;
+.inp {
 }
