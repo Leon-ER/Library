@@ -3,6 +3,7 @@ const removeBtn = document.querySelector(".remove");
 const popUp = document.getElementById("popUp");
 const submit = document.querySelector("#submit");
 const container = document.querySelector(".books");
+const closeBtn = document.getElementsByClassName("close")[0];
 //library of all the books
 let myLibrary = [];
 
@@ -32,7 +33,8 @@ function getBook() {
     return null; // return null if input values are invalid
   }
 
-  return new Book(inputTitle, inputAuthor, inputPages, inputRead);
+  return new Book(inputTitle, inputAuthor, inputPages, inputRead); 
+
 }
 // adds the book to the myLibrary array
 function addBookToLibrary(newBook) {
@@ -52,7 +54,11 @@ submit.addEventListener("click", (e) => {
     closePopUp();
   }
 });
-
+// x closes popUp
+closeBtn.addEventListener('click',()=>{
+  closePopUp();
+})
+// function to close popUp
 function closePopUp() {
   popUp.style.display = "none";
 }
@@ -69,9 +75,7 @@ function createsCard() {
   bookCard.classList.add("book");
   readS.classList.add("read");
   removeS.classList.add("remove");
-  titleS.classList.add("inp");
-  authorS.classList.add("inp");
-  pagesS.classList.add("inp");
+
 
   readS.innerText = "Read";
   removeS.innerText = "Remove";
@@ -93,8 +97,10 @@ function createsCard() {
 
     if (myLibrary[i].read == "Yes") {
       readS.classList.add("isRead");
+      readS.innerText = "Is read"
     } else if (myLibrary[i].read == "No") {
       readS.classList.add("isNotRead");
+      readS.innerText = "Is not read"
     }
   }
 }
@@ -109,10 +115,12 @@ container.addEventListener("click", (event) => {
       myLibrary[buttonValue].read = "No";
       event.target.classList.add("isNotRead");
       event.target.classList.remove("isRead");
+      event.target.innerText = "Is not read"
     } else if (myLibrary[buttonValue].read == "No") {
       myLibrary[buttonValue].read = "Yes";
       event.target.classList.add("isRead");
       event.target.classList.remove("isNotRead");
+      event.target.innerText = "Is read"
     }
   }
   // Remove button
