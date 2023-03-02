@@ -81,8 +81,8 @@ footer {
   z-index: 1
 }
 legend{
-  margin-bottom: 15px;
-  font-size: 20px;
+  margin-bottom: 12px;
+  font-size: 18px;
 }
 .content {
   background-color: rgb(223, 221, 219);
@@ -98,18 +98,18 @@ legend{
 
 #submit {
   color: #ffffff;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   display: flex;
   border-radius: 12px;
   outline: none;
   border-color: transparent;
-  margin-top: 50px;
+  margin-top: 40px;
   background-color: rgb(51, 241, 51);
 }
 .close{
   float: right;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
 }
 #submit:hover,

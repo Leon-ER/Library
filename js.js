@@ -51,6 +51,8 @@ submit.addEventListener("click", (e) => {
   if (newBook !== null) {
     addBookToLibrary(newBook);
     createsCard();
+    // Clears inputs
+    document.getElementById('booksForm').reset();
     closePopUp();
   }
 });
