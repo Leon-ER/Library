@@ -176,7 +176,7 @@ input:focus {
 
 @media only screen and (max-width: 480px) {
   .books {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 190px);
     gap: 10px;
     margin-top: 20px;
   }
