@@ -7,13 +7,13 @@ const closeBtn = document.getElementsByClassName("close")[0];
 //library of all the books
 let myLibrary = [];
 
-//object constructor
-
-function Book(title, author, pages, read) {
-  (this.title = title),
-    (this.author = author),
-    (this.pages = pages),
-    (this.read = read);
+class Book {
+  constructor(title, author, pages, read) {
+    (this.title = title),
+      (this.author = author),
+      (this.pages = pages),
+      (this.read = read);
+  }
 }
 // Gets all the values from the imputs and puts them inside the Book object
 function getBook() {
@@ -33,8 +33,7 @@ function getBook() {
     return null; // return null if input values are invalid
   }
 
-  return new Book(inputTitle, inputAuthor, inputPages, inputRead); 
-
+  return new Book(inputTitle, inputAuthor, inputPages, inputRead);
 }
 // adds the book to the myLibrary array
 function addBookToLibrary(newBook) {
@@ -52,14 +51,14 @@ submit.addEventListener("click", (e) => {
     addBookToLibrary(newBook);
     createsCard();
     // Clears inputs
-    document.getElementById('booksForm').reset();
+    document.getElementById("booksForm").reset();
     closePopUp();
   }
 });
 // x closes popUp
-closeBtn.addEventListener('click',()=>{
+closeBtn.addEventListener("click", () => {
   closePopUp();
-})
+});
 // function to close popUp
 function closePopUp() {
   popUp.style.display = "none";
@@ -77,7 +76,6 @@ function createsCard() {
   bookCard.classList.add("book");
   readS.classList.add("read");
   removeS.classList.add("remove");
-
 
   readS.innerText = "Read";
   removeS.innerText = "Remove";
@@ -99,10 +97,10 @@ function createsCard() {
 
     if (myLibrary[i].read == "Yes") {
       readS.classList.add("isRead");
-      readS.innerText = "Is read"
+      readS.innerText = "Is read";
     } else if (myLibrary[i].read == "No") {
       readS.classList.add("isNotRead");
-      readS.innerText = "Is not read"
+      readS.innerText = "Is not read";
     }
   }
 }
@@ -117,12 +115,12 @@ container.addEventListener("click", (event) => {
       myLibrary[buttonValue].read = "No";
       event.target.classList.add("isNotRead");
       event.target.classList.remove("isRead");
-      event.target.innerText = "Is not read"
+      event.target.innerText = "Is not read";
     } else if (myLibrary[buttonValue].read == "No") {
       myLibrary[buttonValue].read = "Yes";
       event.target.classList.add("isRead");
       event.target.classList.remove("isNotRead");
-      event.target.innerText = "Is read"
+      event.target.innerText = "Is read";
     }
   }
   // Remove button
